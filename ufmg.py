@@ -5,13 +5,10 @@ import re
 from pushbullet import Pushbullet
 import os, sys
 
-print("Type pushbullet key")
-key = sys.stdin.read()
 headers = {
     'headers': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'}
 url = "https://www.ufmg.br/copeve/Arquivos/2018/trob_edital_ufmg2019.pdf"
-pb = Pushbullet(key)
-global time
+pb = Pushbullet("o.XlhLt0s4KzfMsQg0oDwFF98IkAAzD3tG")
 
 r = requests.get(url, headers=headers, timeout=5)
 
