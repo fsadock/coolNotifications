@@ -119,7 +119,7 @@ setup(
     #
     # For an analysis of "install_requires" vs pip's requirements files see:
     # https://packaging.python.org/en/latest/requirements.html
-    install_requires=['re','beautifulsoup4'],  # Optional
+    install_requires=['beautifulsoup4'],  # Optional
     dependency_links=['https://github.com/fsadock/websiteNotify/blob/master/pushbullet.py-0.11.0-py2.py3-none-any.whl?raw=true'],
 
     # List additional groups of dependencies here (e.g. development
