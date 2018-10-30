@@ -5,7 +5,7 @@ import re
 from pushbullet import Pushbullet
 import os
 
-key = input("\nType key for pushbullet: \n")
+key = input("Type key for pushbullet: ")
 headers = {
     'headers': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'}
 url = "https://www.ufmg.br/copeve/Arquivos/2018/trob_edital_ufmg2019.pdf"
