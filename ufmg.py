@@ -3,9 +3,10 @@ from bs4 import BeautifulSoup
 from time import sleep, strftime
 import re
 from pushbullet import Pushbullet
-import os
+import os, sys
 
-key = input("Type key for pushbullet: ")
+print("Type pushbullet key")
+key = sys.stdin.read()
 headers = {
     'headers': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'}
 url = "https://www.ufmg.br/copeve/Arquivos/2018/trob_edital_ufmg2019.pdf"
