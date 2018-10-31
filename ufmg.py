@@ -2,6 +2,14 @@ import requests
 from time import sleep, strftime
 from pushbullet import Pushbullet
 import os
+from flask import Flask
+
+app = Flask(__name__)
+
+
+@app.route('/')
+def test():
+    return 'Working!!'
 
 headers = {
     'headers': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'}
