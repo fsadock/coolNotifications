@@ -16,6 +16,7 @@ def homepage():
     <p>Hoje é: {time}.</p>
     <style>
         body{{
+            text-align: center;
             background-color: pink;
     }}</style>
     <img src="http://loremflickr.com/600/400/dog" />
