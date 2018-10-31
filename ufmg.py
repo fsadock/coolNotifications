@@ -2,6 +2,7 @@ import requests
 from time import strftime
 from pushbullet import Pushbullet
 from flask import Flask
+from flask import request, jsonify
 
 
 # import os
@@ -36,6 +37,9 @@ def checkWebPage():
     r = requests.get(url, headers=headers, timeout=5)
 
     time = strftime('%X')
+
+    print("\nuser's IP: ", request.remote_addr)
+
     print(time, r.status_code)
     if r.status_code == 200:
         print("Saiu o edital!")
