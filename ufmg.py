@@ -1,11 +1,9 @@
 import requests
-from time import sleep, strftime
+from time import strftime
 from pushbullet import Pushbullet
 from flask import Flask
 
-from apscheduler.schedulers.blocking import BlockingScheduler
 
-sched = BlockingScheduler()
 # import os
 app = Flask(__name__)
 
@@ -14,6 +12,8 @@ app = Flask(__name__)
 def homepage():
 
     the_time = strftime("%A, %d %b %Y %H:%M")
+
+    checkWebPage()
 
     return """
     <h1>Oi, aqui é o sadogo</h1>
@@ -27,7 +27,6 @@ def homepage():
     """.format(time=the_time)
 
 
-@sched.scheduled_job('interval', hours=8)
 def checkWebPage():
 
     headers = {
@@ -43,7 +42,6 @@ def checkWebPage():
         # os.system('ntfy -t "SITE UP!!" send "%s"' % url)
         pb.push_note("UFMG", "Saiu EDITAL")
 
-sched.start()
 
 if __name__ == '__main__':
     app.run(debug=True, use_reloader=True)
