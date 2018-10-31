@@ -38,7 +38,7 @@ def checkWebPage():
 
     time = strftime('%X')
 
-    print("\nuser's IP: ", request.remote_addr)
+    print("\nuser's IP: ", request.environ['REMOTE_ADDR'])
 
     print(time, r.status_code)
     if r.status_code == 200:
