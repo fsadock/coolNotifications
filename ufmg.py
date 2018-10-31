@@ -3,10 +3,10 @@ from time import sleep, strftime
 from pushbullet import Pushbullet
 import os
 from flask import Flask
-ufmg = Flask(__name__)
+app = Flask(__name__)
 
 
-@ufmg.route('/')
+@app.route('/')
 def homepage():
 
     the_time = strftime("%A, %d %b %Y %H:%M")
@@ -39,4 +39,4 @@ def homepage():
 
 
 if __name__ == '__main__':
-    ufmg.run(debug=True, use_reloader=True)
+    app.run(debug=True, use_reloader=True)
