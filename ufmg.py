@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 
 @app.route('/')
-def test():
+def ufmg():
     return 'Working!!'
 
 headers = {
