@@ -12,7 +12,7 @@ def checkWebPage():
     headers = {
         'headers': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'}
     url = "https://www.ufmg.br/copeve/Arquivos/2018/trob_edital_ufmg2019.pdf"
-    pb = Pushbullet("o.XlhLt0s4KzfMsQg0oDwFF98IkAAzD3tG")
+    pb = Pushbullet("pushbullet-key")
     r = requests.get(url, headers=headers, timeout=5)
 
     time = strftime('%X')
